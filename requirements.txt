@@ -1,0 +1,5 @@
+Flask
+flask-httpauth
+scikit-learn
+mysql-connector-python
+nltk

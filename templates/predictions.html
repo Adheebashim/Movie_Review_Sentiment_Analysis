@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        td {
+            color: #333;
+        }
+
+        td:nth-child(3) {
+            text-transform: capitalize;
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predictions Log</h1>
+    {% if connected %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Input Text</th>
+                    <th>Prediction Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if predictions %}
+                    {% for prediction in predictions %}
+                        <tr>
+                            <td>{{ prediction[0] }}</td>
+                            <td>{{ prediction[1] }}</td>
+                            <td>{{ prediction[2] }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="3">No predictions available.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <a href="/">Back to Home</a>
+    {% else %}
+        <p>Error: Unable to connect to the database.</p>
+    {% endif %}
+</body>
+</html>
