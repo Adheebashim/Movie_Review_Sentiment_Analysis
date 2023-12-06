@@ -1,6 +1,6 @@
 # Movie_Review_Sentiment_Analysis
 
-This repository contains a simple web service for sentiment analysis, which includes an AI model developed using scikit-learn  and a Flask web application that serves the model. The deployment is orchestrated using Docker and Kubernetes. The sentiment analysis model predicts whether a given text (such as a movie review) carries a positive or negative sentiment.   review this and tell is it good or bad
+This repository contains a simple web service for sentiment analysis, which includes an AI model developed using scikit-learn  and a Flask web application that serves the model. The deployment is orchestrated using Docker and Kubernetes. The sentiment analysis model predicts whether a given text (such as a movie review) carries a positive or negative sentiment.  
 
 ## Project Structure
 
