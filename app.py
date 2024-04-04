@@ -49,7 +49,7 @@ def create_connection():
     try:
         host = os.environ.get('DB_HOST', 'host.docker.internal')
         user = os.environ.get('DB_USER', 'root')  # give your user
-        password = os.environ.get('DB_PASSWORD', '1010') # give your password
+        password = os.environ.get('DB_PASSWORD', '') # give your password
         database = os.environ.get('DB_NAME', 'movie_review') # give your db name
 
         print(f"Connecting to MySQL: {user}@{host}/{database}")
